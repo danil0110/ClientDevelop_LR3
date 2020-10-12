@@ -1,0 +1,50 @@
+/* ======== Обнуление ======== */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ====X==== Обнуление ====X==== */
+
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 15px;
+}
+
+.navigation-menu img {
+    width: 50px;
+}
+
+.navigation-menu__links {
+    display: flex;
+    margin-left: 15px;
+}
+
+.navigation-menu__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.navigation-menu__item a {
+    color: white;
+    transition-property: border-bottom;
+    transition-duration: .5s;
+}
+
+.navigation-menu__item a:hover {
+    border-bottom: 1px solid white;
+}
