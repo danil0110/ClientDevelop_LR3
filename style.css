@@ -97,11 +97,38 @@ hr {
     font-weight: bold;
 }
 
+.main-paragraph {
+    margin: 0 200px;
+}
+
+.main-paragraph__main {
+    font-size: 2.2em;
+}
+
+.main-paragraph__sub {
+    margin-top: 50px;
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+
 @media (max-width: 1280px) {
     .short-info {
         margin: 20px 50px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         row-gap: 20px;
+    }
+
+    .main-paragraph {
+        margin: 0 100px;
+    }
+
+    .main-paragraph__main {
+        font-size: 1.8em;
+    }
+    
+    .main-paragraph__sub {
+        font-size: 1em;
+        line-height: 1.6em;
     }
 }
