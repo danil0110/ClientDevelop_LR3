@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 ul {
     list-style: none;
 }
@@ -47,4 +52,20 @@ a {
 
 .navigation-menu__item a:hover {
     border-bottom: 1px solid white;
+}
+
+.fullscreen-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat center / cover url('images/db2018au00604-large.jpg');
+    height: 91.5%;
+    width: 100%;
+}
+
+.fullscreen-image h1 {
+    color: white;
+    font-weight: 1500;
+    font-size: 7em;
+    text-shadow: black 0 10px 10px;
 }
