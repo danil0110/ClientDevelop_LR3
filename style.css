@@ -92,6 +92,7 @@ hr {
     font-weight: 1500;
     font-size: 7em;
     text-shadow: black 0 10px 10px;
+    margin-top: 80px;
 }
 
 .short-info {
@@ -135,6 +136,118 @@ hr {
     display: none;
 }
 
+.carousel__buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+}
+
+.carousel__previous, .carousel__next {
+    transition: color 0.3s ease;
+}
+
+.carousel__previous:hover,
+.carousel__next:hover {
+    cursor: pointer;
+    color: #2f82ff;
+}
+
+.carousel__next.disabled,
+.carousel__previous.disabled,
+.carousel__next.disabled:hover,
+.carousel__previous.disabled:hover {
+    color: rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.carousel {
+    width: 1150px;
+    margin: 20px auto 50px;
+    overflow: hidden;
+}
+
+.carousel__visible-box {
+    width: 4000px;
+    display: flex;
+    transition: margin-left 0.5s;
+}
+
+.carousel__visible-box.item1 {
+    margin-left: 0;
+}
+
+.carousel__visible-box.item2 {
+    margin-left: -1950px;
+}
+
+.carousel__visible-box.item3 {
+    margin-left: -3900px;
+}
+
+.carousel__item {
+    margin-right: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .carousel__item__info {
+    width: 100%;
+} */
+
+.carousel__item__title {
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.carousel__item__subtitle {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.carousel__item__beforeprice, .carousel__item__price {
+    font-size: 1.4em;
+}
+
+.carousel__item__price {
+    font-weight: bold;
+}
+
+.carousel__item__features {
+    list-style: '+';
+    padding-left: 10px;
+    margin-top: 20px;
+    width: 450px;
+}
+
+.carousel__item__features li {
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+.carousel__item__picture.pic1 {
+    background: url('images/front-ce.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.carousel__item__picture.pic2 {
+    background: url('images/front-le-tdi.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.carousel__item__picture.pic3 {
+    background: url('images/front-le-tsi.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.carousel__item__picture {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+    right: -200px;
+}
+
 .scroll-top {
     display: flex;
     justify-content: center;
@@ -146,7 +259,7 @@ hr {
     width: 70px;
     height: 70px;
     background-color: #353535;
-    box-shadow: 0 10px 20px black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
     z-index: 30;
     transition: background-color 0.3s;
     transition: all 0.3s ease;
@@ -158,7 +271,7 @@ hr {
 
 .scroll-top:hover {
     cursor: pointer;
-    background-color: #3d3d3d;
+    background-color: #2f82ff;
 }
 
 .scroll-top i {
@@ -182,6 +295,41 @@ hr {
     .main-paragraph__sub {
         font-size: 1em;
         line-height: 1.6em;
+    }
+
+    .carousel {
+        width: 500px;
+        margin: 50px auto;
+    }
+
+    .carousel__item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel__item__picture.pic1 {
+        bottom: 150px;
+    }
+
+    .carousel__item__picture.pic2 {
+        bottom: 50px;
+    }
+
+    .carousel__item__picture {
+        height: 250px;
+        right: 0;
+    }
+
+    .carousel__visible-box.item1 {
+        margin-left: 0;
+    }
+    
+    .carousel__visible-box.item2 {
+        margin-left: -1500px;
+    }
+    
+    .carousel__visible-box.item3 {
+        margin-left: -2975px;
     }
 }
 
@@ -286,5 +434,63 @@ hr {
 
     .main-paragraph {
         margin: 0 50px;
+    }
+
+    .carousel {
+        width: auto;
+        margin: 50px;
+    }
+
+    .carousel__item__picture {
+        width: 350px;
+    }
+
+    .carousel__visible-box.item1 {
+        margin-left: 0;
+    }
+    
+    .carousel__visible-box.item2 {
+        margin-left: -1365px;
+    }
+    
+    .carousel__visible-box.item3 {
+        margin-left: -2680px;
+    }
+
+    .carousel__item__features {
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 479px) {
+    .short-info {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel {
+        margin: 50px 5px 20px;
+    }
+
+    .carousel__item__picture {
+        height: 200px;
+        width: 250px;
+        background-size: cover;
+    }
+
+    .carousel__item__picture.pic3 {
+        right: 100px;
+    }
+
+    .carousel__visible-box.item1 {
+        margin-left: 0;
+    }
+    
+    .carousel__visible-box.item2 {
+        margin-left: -1270px;
+    }
+    
+    .carousel__visible-box.item3 {
+        margin-left: -2520px;
     }
 }
