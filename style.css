@@ -318,6 +318,15 @@ hr {
 .design-grid__picture {
     width: 300px;
     height: 200px;
+    transition: transform 0.5s;
+}
+
+.design-grid .wrap {
+    overflow: hidden;
+}
+
+.design-grid__picture:hover {
+    transform: scale(1.2);
 }
 
 .design-grid__picture.pic1 {
