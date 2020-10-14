@@ -7,13 +7,15 @@ let carouselNext = document.querySelector('.carousel__next');
 let currentItem = 1;
 
 burgerMenu.onclick = () => {
+    let scrollPos = pageYOffset;
     burgerMenu.classList.toggle('active');
     linkList.classList.toggle('active');
     let body = document.getElementsByTagName('body');
     body[0].classList.toggle('lock');
+
     if (burgerMenu.classList.contains('active')) {
         scrollButton.classList.remove('visible');
-    } else if (pageYOffset >= 200) {
+    } else if (scrollPos >= 200) {
         scrollButton.classList.add('visible');
     }
 }

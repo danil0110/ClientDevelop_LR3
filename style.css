@@ -118,7 +118,7 @@ hr {
     font-weight: bold;
 }
 
-.main-paragraph {
+.main-paragraph, .section {
     margin: 0 200px;
 }
 
@@ -134,6 +134,10 @@ hr {
 
 .burger-menu {
     display: none;
+}
+
+.burger-menu:hover {
+    cursor: pointer;
 }
 
 .carousel__buttons {
@@ -191,10 +195,6 @@ hr {
     justify-content: space-between;
 }
 
-/* .carousel__item__info {
-    width: 100%;
-} */
-
 .carousel__item__title {
     font-weight: bold;
     font-size: 1.8em;
@@ -246,6 +246,7 @@ hr {
     width: 500px;
     background-size: cover;
     right: -200px;
+    z-index: -1;
 }
 
 .scroll-top {
@@ -279,12 +280,92 @@ hr {
     color: white;
 }
 
+.section__title {
+    font-weight: bold;
+    font-size: 3.6em;
+}
+
+.section__subtitle {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.section__desc {
+    margin-top: 30px;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+.design-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    column-gap: 10px;
+    justify-content: space-between;
+}
+
+.design-grid__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.design-grid__picture {
+    width: 300px;
+    height: 200px;
+}
+
+.design-grid__picture.pic1 {
+    background: url('images/vw-tiguan-silber-exterieur-heck.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.design-grid__picture.pic2 {
+    background: url('images/interieur.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.design-grid__picture.pic3 {
+    background: url('images/vw-tiguan-rot-led-scheinwerfer.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.design-grid__picture.pic4 {
+    background: url('images/vw-tiguan-felgen.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.design-grid__title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.design-grid__desc {
+    margin-top: 10px;
+    line-height: 25px;
+    padding: 0 10px 10px 10px;
+}
+
+@media (max-width: 1645px) {
+    .design-grid {
+        grid-template-columns: repeat(2, 300px);
+        justify-content: space-around;
+        row-gap: 50px;
+    }
+}
+
 @media (max-width: 1280px) {
     .fullscreen-image h1 {
         font-size: 5em;
     }
 
-    .main-paragraph {
+    .main-paragraph, .section {
         margin: 0 100px;
     }
 
@@ -426,6 +507,16 @@ hr {
         margin-bottom: 20px;
     }
 
+    .scroll-top {
+        width: 50px;
+        height: 50px;
+        font-size: 5px;
+    }
+
+    .scroll-top i {
+        font-size: 15px;
+    }
+
     hr {
         margin: 50px;
     }
@@ -437,7 +528,7 @@ hr {
         row-gap: 20px;
     }
 
-    .main-paragraph {
+    .main-paragraph, .section {
         margin: 0 50px;
     }
 
@@ -466,6 +557,10 @@ hr {
         width: 250px;
     }
 
+    .design-grid {
+        grid-template-columns: 300px;
+        row-gap: 50px;
+    }
 }
 
 @media (max-width: 479px) {
