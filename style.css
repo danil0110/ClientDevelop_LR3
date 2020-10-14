@@ -266,6 +266,16 @@ hr {
     transition: all 0.3s ease;
 }
 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #245db3;
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+    }
+}
+
 .scroll-top.visible {
     right: 20px;
 }
@@ -273,6 +283,9 @@ hr {
 .scroll-top:hover {
     cursor: pointer;
     background-color: #2f82ff;
+    animation: pulse 2s infinite;
+    animation-delay: 0.3s;
+    box-shadow: none;
 }
 
 .scroll-top i {
